@@ -10,7 +10,7 @@ for (i = 1, row = null; row = table.rows[i]; i++)
             {
                 continue;
             }
-
+            
         if (row.cells[5].innerText == "" || row.cells[5].innerText == "Vắng") continue;
 		if (parseFloat(row.cells[5].innerText) < 5) continue;
         
@@ -23,8 +23,9 @@ let ans = totalMark * 1.0 / totalCredit;
 console.log(`-> Tổng số chỉ : ${totalCredit}`);
 console.log(`-> GPA: ${ans}`);
 round = ans.toFixed(2);
+
 if(round >=9 && round < 10) console.log(`Điểm sau khi làm tròn : ${round} ->Xuất Sắc`);
 else if(round >=8 && round <9) console.log(`Điểm sau khi làm tròn : ${round} -> Giỏi`);
 else if (round >=7 && round <8) console.log(`Điểm sau khi làm tròn : ${round} -> Khá`);
 else if(round>=6 && round <7) console.log(`Điểm sau khi làm tròn : ${round} -> Trung Bình Khá`);
-else if(round >=5 && round < 6) console.log(`Điểm sau khi làm tròn : ${round} -> Trung Bình`);
+else console.log(`Điểm sau khi làm tròn : ${round} -> Trung Bình`);
